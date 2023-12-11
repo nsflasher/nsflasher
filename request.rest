@@ -1,0 +1,140 @@
+//Create Admin
+POST http://localhost:5000/admins
+Content-Type: application/json
+
+{
+    "name":"Tuman Team",
+    "email": "tuman.project@gmail.com",
+    "password":"sendaljepit",
+    "confPassword":"sendaljepit",
+    "role":"admin"
+}
+
+###
+//Get All Admins
+GET http://localhost:5000/admins
+
+###
+//Get Admin By Id
+GET http://localhost:5000/admins/b5bb9c75-ab5b-4e44-af4a-65aece1de15c
+
+###
+//Update Admin
+PATCH  http://localhost:5000/admins/b5bb9c75-ab5b-4e44-af4a-65aece1de15c
+Content-Type: application/json
+
+{
+    "name":"Tuman Team",
+    "email": "tuman.project@gmail.com",
+    "password":"",
+    "confPassword":"",
+    "role":"admin"
+}
+
+###
+//Delete Admin
+DELETE http://localhost:5000/admins/b5bb9c75-ab5b-4e44-af4a-65aece1de15c
+
+###
+//LOGIN Owner
+POST http://localhost:5000/admins_login
+Content-Type: application/json
+
+{
+    "email":"yoggyprastya@gmail.com",
+    "password": "Nada1609"
+}
+
+###
+//LOGIN Admin
+POST http://localhost:5000/admins_login
+Content-Type: application/json
+
+{
+    "email":"tuman.project@gmail.com",
+    "password": "sendaljepit"
+}
+
+###
+//Verify Login Admin
+GET http://localhost:5000/admins_verify
+
+###
+//Logout Admin
+DELETE http://localhost:5000/admins_logout
+
+###
+//Get All Users
+GET http://localhost:5000/users
+
+###
+//Get Single Users
+GET http://localhost:5000/users/dac91e80-cd3f-4a9a-8c73-9044bcb7e326
+
+###
+//Create Data User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username":"@tumanUser1",
+    "email":"tuman.user1@gmail.com",
+    "password": "tuman.user1",
+    "android_id":"QKQ1.200207.003",
+    "expiry":"2023-11-04 11:12:13"
+}
+
+###
+//Update Data Owner
+PATCH  http://localhost:5000/users/bf8354d6-3abc-4f03-bd2f-4ee70a5ba20f
+Content-Type: application/json
+
+{
+    "username":"@tumans21",
+    "email":"tuman.user@gmail.com",
+    "password": "tuman.test",
+    "android_id":"QKQ1.200207.001",
+    "expiry":"2023-11-04 11:12:13"
+}
+
+###
+//Update Data User admin
+PATCH http://localhost:5000/users/dac91e80-cd3f-4a9a-8c73-9044bcb7e326
+Content-Type: application/json
+
+{
+    "username":"@renoUpdate",
+    "email":"reno.sbs@gmail.com",
+    "password": "reno321",
+    "android_id":"QKQ1.200207.001",
+    "expiry":"2023-11-04 11:12:13"
+}
+
+###
+//Delete Data User
+DELETE http://localhost:5000/users/bf8354d6-3abc-4f03-bd2f-4ee70a5ba20f
+
+###
+//Delete Data User
+
+DELETE http://localhost:5000/users/02d564bf-f43b-4891-ab9d-d8725a4c28e9
+
+###
+//LOGIN User
+POST http://localhost:5000/users_login
+Content-Type: application/json
+
+{
+    "email":"reno.sbs@gmail.com",
+    "password": "reno321",
+    "android_id":"QKQ1.200207.001",
+    "date": "2022-11-04 11:12:13"
+}
+
+###
+//LOGIN User
+GET http://localhost:5000/users_verify
+
+###
+//LOGIN User
+DELETE  http://localhost:5000/users_logout
